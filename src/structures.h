@@ -11,6 +11,9 @@ struct Commit {
 	std::string treehash;
 	std::string parenthash;
 	std::string metadeta;
+	std::string commithash;
+	std::string contents;
+
 };
 
 struct TreeEntry {
@@ -20,6 +23,7 @@ struct TreeEntry {
 };
 
 struct Tree {
+	std::string hash;
 	std::vector<TreeEntry> contents;
 };
 

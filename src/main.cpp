@@ -1,33 +1,32 @@
+#include<bits/stdc++.h>
+#include <utils.h>
+#include <fstream>
 /*
 
 
-conceptually how do i approach this ?
-makes sense,
+so the hash structure,
 
-so first, the MVP,
-
-the first thing i want too get done is 
+so 
 
 
-setting up the hashing system successfully reading a file and hashing them
-
-so the structure of each object is ,
-
-
-we have a commit object which,
-
-
-stores select info,
-
-same with the tree object
-
-
+each object/commit contains a head,
 
 
 */
 
 
 int main() {
+    //so the main thing is reading the file and spitting out a hash
+    //read the file.
+    //so the read file
+    ifstream file("testhashfile.txt"); 
+    stringstream buffer;
+
+    buffer << file.rdbuf();
+
+    std::string content = buffer.str();
+
+    std::cout << "the hashed file: " << sha256(content) << '\n';
     
 }
 
